@@ -1,0 +1,104 @@
+/* Cabeçalho com Logo Original Ampliada e Sem Fundo */
+header {
+  background: var(--cor-superficie);
+  border-bottom: 1px solid var(--borda);
+  padding: 10px 28px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+.nav-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-esquerda {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* LOGO OFICIAL AMPLIAÇÃO E ISOLAMENTO */
+.nav-logo-oficial {
+  height: 60px; /* Bem ampliada */
+  width: auto;
+  object-fit: contain;
+  display: block;
+  mix-blend-mode: multiply; /* Remove fundo branco automaticamente */
+  filter: contrast(105%);
+}
+
+body.modo-escuro .nav-logo-oficial {
+  mix-blend-mode: normal;
+  background: transparent;
+}
+
+.nav-titulo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--cor-primaria);
+  line-height: 1;
+}
+
+body.modo-escuro .nav-titulo { 
+  color: var(--cor-turquesa); 
+}
+
+.nav-slogan {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--cor-texto-mutado);
+}
+
+.nav-controles {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.toggle-abas {
+  background: var(--cor-fundo);
+  border: 1px solid var(--borda);
+  padding: 4px;
+  border-radius: 12px;
+  display: flex;
+  gap: 4px;
+}
+
+.btn-nav-aba {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cor-texto-mutado);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-nav-aba.ativa {
+  background: var(--cor-superficie);
+  color: var(--cor-primaria);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+body.modo-escuro .btn-nav-aba.ativa {
+  color: var(--cor-turquesa);
+}
+
+.btn-icone-tema {
+  background: var(--cor-fundo);
+  border: 1px solid var(--borda);
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}

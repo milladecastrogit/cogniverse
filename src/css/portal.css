@@ -1,0 +1,187 @@
+/* Tela Inicial com Fundo em Degradê de Linhas Finas & Logo Oficial */
+#telaInicialCogniverse {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(145deg, #F7F4FF 0%, #F2FCFF 45%, #FFFFFF 100%);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  overflow: hidden;
+}
+
+#telaInicialCogniverse::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../imagens/fundo-cogniverse.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Mostra a arte inteira em vez de cortar elementos */
+  background-size: min(96vw, 1500px) min(92vh, 980px);
+  opacity: 0.92;
+  pointer-events: none;
+}
+
+#telaInicialCogniverse::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(123, 44, 191, 0.16) 0%, transparent 35%),
+    radial-gradient(circle at 82% 76%, rgba(0, 194, 209, 0.17) 0%, transparent 32%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.34) 0%, rgba(255, 255, 255, 0.68) 100%);
+  pointer-events: none;
+}
+
+.portal-glassmorphism {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 28px;
+  padding: 40px 38px;
+  max-width: 580px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 25px 60px -10px rgba(56, 17, 128, 0.16), 0 10px 25px rgba(0, 194, 209, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+.selo-pulsante {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(0, 194, 209, 0.12);
+  color: #008794;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.selo-ponto {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #00C2D1;
+  animation: pulsoSuave 1.5s infinite;
+}
+
+@keyframes pulsoSuave {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.6); opacity: 0.4; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* LOGO ORIGINAL OFICIAL EM DESTAQUE */
+.logo-hero-oficial {
+  width: 210px; /* Grande e nítida */
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto 12px auto;
+  display: block;
+  object-fit: contain;
+  mix-blend-mode: multiply; /* Remove o fundo branco perfeitamente */
+  filter: contrast(105%);
+}
+
+.portal-titulo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #381180;
+  margin-bottom: 2px;
+}
+
+.portal-slogan {
+  font-family: 'Raleway', sans-serif;
+  font-style: italic;
+  color: #7B2CBF;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.portal-descricao {
+  color: #4B5563;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.card-usuario-login {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.avatar-login-circulo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00C2D1, #7B2CBF);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.btn-entrar-universo {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #381180 0%, #7B2CBF 50%, #00C2D1 100%);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px -5px rgba(123, 44, 191, 0.45);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-entrar-universo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px -5px rgba(123, 44, 191, 0.6);
+}
+
+@media (max-width: 720px) {
+  #telaInicialCogniverse::before {
+    background-size: 98vw 88vh;
+    background-position: center top;
+    opacity: 0.78;
+  }
+
+  .portal-glassmorphism {
+    padding: 28px 18px;
+    border-radius: 20px;
+  }
+
+  .logo-hero-oficial {
+    width: 176px;
+  }
+}

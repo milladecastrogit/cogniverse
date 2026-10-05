@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <!-- Gradiente de Fundo Degradê Violeta Suave para Branco Neutro -->
+    <linearGradient id="gradienteFundo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2E9FC"/>
+      <stop offset="45%" stop-color="#F9F6FE"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+
+    <!-- Gradiente das Linhas Neurais -->
+    <linearGradient id="gradLinhas" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E01E5A" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#7B2CBF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#00C2D1" stop-opacity="0.45"/>
+    </linearGradient>
+
+    <!-- Marca d'Água Central da Logo -->
+    <radialGradient id="gradMarcaDagua" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7B2CBF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#00C2D1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Fundo Principal -->
+  <rect width="1920" height="1080" fill="url(#gradienteFundo)"/>
+
+  <!-- Camada 1: Ondas Fluidas Sinápticas (Referência Imagem 2) -->
+  <path d="M0,200 C400,350 800,50 1200,220 C1600,390 1800,150 1920,180 L1920,0 L0,0 Z" fill="none" stroke="#7B2CBF" stroke-width="1" stroke-opacity="0.18"/>
+  <path d="M0,240 C420,380 780,90 1220,250 C1620,410 1780,180 1920,210" fill="none" stroke="#00C2D1" stroke-width="0.8" stroke-opacity="0.2"/>
+  <path d="M0,850 C380,720 750,980 1150,820 C1550,660 1750,920 1920,870" fill="none" stroke="#7B2CBF" stroke-width="1.2" stroke-opacity="0.15"/>
+
+  <!-- Camada 2: Tesselação Hexagonal Biomórfica (Referência Imagens 2 e 3) -->
+  <g stroke="#7B2CBF" stroke-width="1" stroke-opacity="0.15" fill="none">
+    <!-- Bloco Superior Direito -->
+    <polygon points="1650,80 1700,50 1750,80 1750,140 1700,170 1650,140"/>
+    <polygon points="1750,80 1800,50 1850,80 1850,140 1800,170 1750,140"/>
+    <polygon points="1700,170 1750,140 1800,170 1800,230 1750,260 1700,230"/>
+    <polygon points="1600,170 1650,140 1700,170 1700,230 1650,260 1600,230"/>
+    
+    <!-- Bloco Inferior Esquerdo -->
+    <polygon points="80,880 130,850 180,880 180,940 130,970 80,940"/>
+    <polygon points="180,880 230,850 280,880 280,940 230,970 180,940"/>
+    <polygon points="130,970 180,940 230,970 230,1030 180,1060 130,1030"/>
+    <circle cx="130" cy="850" r="4" fill="#7B2CBF" fill-opacity="0.4"/>
+    <circle cx="230" cy="970" r="4" fill="#00C2D1" fill-opacity="0.4"/>
+    <circle cx="1700" cy="170" r="4" fill="#E01E5A" fill-opacity="0.4"/>
+  </g>
+
+  <!-- Camada 3: Rede de Linhas e Nós Neurais (Referência Imagem 1) -->
+  <g stroke="url(#gradLinhas)" stroke-width="1.5">
+    <line x1="80" y1="120" x2="220" y2="180"/>
+    <line x1="220" y1="180" x2="310" y2="110"/>
+    <line x1="220" y1="180" x2="260" y2="320"/>
+    <line x1="310" y1="110" x2="440" y2="210"/>
+    <line x1="260" y1="320" x2="440" y2="210"/>
+    <line x1="440" y1="210" x2="560" y2="340"/>
+    <line x1="440" y1="210" x2="680" y2="260"/>
+    <line x1="560" y1="340" x2="720" y2="420"/>
+    <line x1="680" y1="260" x2="860" y2="390"/>
+    <line x1="720" y1="420" x2="860" y2="390"/>
+    
+    <!-- Conexões Direitas -->
+    <line x1="1280" y1="780" x2="1420" y2="690"/>
+    <line x1="1420" y1="690" x2="1580" y2="760"/>
+    <line x1="1420" y1="690" x2="1490" y2="580"/>
+    <line x1="1580" y1="760" x2="1740" y2="680"/>
+    <line x1="1490" y1="580" x2="1680" y2="590"/>
+    <line x1="1680" y1="590" x2="1740" y2="680"/>
+    <line x1="1740" y1="680" x2="1860" y2="820"/>
+  </g>
+
+  <!-- Nós Neurais Esféricos com Brilho -->
+  <g fill="#7B2CBF">
+    <circle cx="80" cy="120" r="7" fill="#E01E5A"/>
+    <circle cx="220" cy="180" r="9" fill="#7B2CBF"/>
+    <circle cx="310" cy="110" r="6" fill="#00C2D1"/>
+    <circle cx="260" cy="320" r="8" fill="#7B2CBF"/>
+    <circle cx="440" cy="210" r="10" fill="#381180"/>
+    <circle cx="560" cy="340" r="7" fill="#00C2D1"/>
+    <circle cx="680" cy="260" r="8" fill="#7B2CBF"/>
+    <circle cx="720" cy="420" r="9" fill="#381180"/>
+    <circle cx="860" cy="390" r="11" fill="#00C2D1"/>
+
+    <circle cx="1280" cy="780" r="8" fill="#7B2CBF"/>
+    <circle cx="1420" cy="690" r="11" fill="#381180"/>
+    <circle cx="1580" cy="760" r="9" fill="#00C2D1"/>
+    <circle cx="1490" cy="580" r="7" fill="#E01E5A"/>
+    <circle cx="1680" cy="590" r="8" fill="#7B2CBF"/>
+    <circle cx="1740" cy="680" r="10" fill="#00C2D1"/>
+    <circle cx="1860" cy="820" r="7" fill="#E01E5A"/>
+  </g>
+
+  <!-- Camada 4: Trilhas de Circuito Tecnológico (Referência Imagem 3) -->
+  <g stroke="#381180" stroke-width="1.2" stroke-opacity="0.2" fill="none">
+    <polyline points="1400,220 1560,220 1620,280 1780,280"/>
+    <circle cx="1780" cy="280" r="3" fill="#381180" fill-opacity="0.3"/>
+    <polyline points="1450,260 1540,260 1580,300 1720,300"/>
+    <circle cx="1720" cy="300" r="3" fill="#00C2D1" fill-opacity="0.3"/>
+  </g>
+
+  <!-- Marca d'Água Central: Peça de Quebra-Cabeça Gigante e Suave -->
+  <g transform="translate(960, 540) scale(4.5) translate(-50, -50)" opacity="0.06">
+    <path d="M42 28C42 24.6863 44.6863 22 48 22H52C55.3137 22 58 24.6863 58 28V36H66C69.3137 36 72 38.6863 72 42V46C72 49.3137 69.3137 52 66 52H58V60C58 63.3137 55.3137 66 52 66H48C44.6863 66 42 63.3137 42 60V52H34C30.6863 52 28 49.3137 28 46V42C28 38.6863 30.6863 36 34 36H42V28Z" fill="#381180"/>
+  </g>
+</svg>

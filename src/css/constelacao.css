@@ -1,0 +1,158 @@
+/* Estilos do Canvas de Constelação Sináptica e Simulação Situada */
+.grid-inovacao {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .grid-inovacao { grid-template-columns: 1fr; }
+}
+
+.card-constelacao {
+  background: var(--cor-superficie);
+  border: 1px solid var(--borda);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: var(--sombra-flutuante);
+  position: relative;
+  overflow: hidden;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+}
+
+.topo-constelacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.etiqueta-topo {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--cor-turquesa);
+  text-transform: uppercase;
+}
+
+.titulo-constelacao {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  color: var(--cor-primaria);
+}
+
+.badge-interativo {
+  font-size: 0.8rem;
+  background: rgba(0, 194, 209, 0.1);
+  color: var(--cor-turquesa);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.instrucao-constelacao {
+  font-size: 0.85rem;
+  color: var(--cor-texto-mutado);
+  margin-bottom: 12px;
+}
+
+#canvasNeural {
+  width: 100%;
+  height: 380px;
+  background:
+    radial-gradient(circle at 12% 14%, rgba(255, 255, 255, 0.24) 0%, transparent 26%),
+    radial-gradient(circle at 80% 76%, rgba(0, 194, 209, 0.14) 0%, transparent 35%),
+    radial-gradient(circle at 50% 50%, rgba(123, 44, 191, 0.12) 0%, transparent 44%),
+    linear-gradient(160deg, #050715 0%, #0D1D3E 45%, #1D1A4A 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  box-shadow: inset 0 0 44px rgba(7, 12, 29, 0.78);
+  cursor: crosshair;
+}
+
+body.modo-escuro #canvasNeural {
+  border-color: rgba(203, 213, 225, 0.2);
+}
+
+.coluna-interativa {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-estado-mental {
+  background: var(--cor-superficie);
+  border: 1px solid var(--borda);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: var(--sombra-flutuante);
+}
+
+.barra-estado-cognitivo {
+  height: 10px;
+  border-radius: 20px;
+  background: #E5E7EB;
+  overflow: hidden;
+  margin: 12px 0 6px;
+  display: flex;
+}
+
+.progresso-mental {
+  height: 100%;
+  width: 48%;
+  background: linear-gradient(90deg, var(--cor-verde), var(--cor-turquesa));
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+
+.card-simulacao {
+  background: var(--cor-superficie);
+  border: 1px solid var(--borda);
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: var(--sombra-flutuante);
+}
+
+.cenario-caixa {
+  background: rgba(123, 44, 191, 0.05);
+  border-left: 4px solid var(--cor-roxo);
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin: 12px 0;
+  line-height: 1.5;
+}
+
+.opcoes-decisao {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn-decisao {
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--borda);
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-size: 0.88rem;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-decisao:hover {
+  border-color: var(--cor-turquesa);
+  background: rgba(0, 194, 209, 0.08);
+  transform: translateX(4px);
+}
+
+.resultado-simulacao-box {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  display: none;
+  padding: 10px;
+  border-radius: 8px;
+}

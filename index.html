@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cogniverse - Conectando mentes, criando futuros</title>
+  
+  <!-- Tipografia Oficial da Marca -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&family=Poppins:wght@500;600&family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
+  
+  <!-- Folhas de Estilo Modulares -->
+  <link rel="stylesheet" href="src/css/variaveis.css">
+  <link rel="stylesheet" href="src/css/portal.css">
+  <link rel="stylesheet" href="src/css/cabecalho.css">
+  <link rel="stylesheet" href="src/css/constelacao.css">
+  <link rel="stylesheet" href="src/css/estudante.css">
+  <link rel="stylesheet" href="src/css/docente.css">
+</head>
+<body>
+
+  <!-- ========================================================
+       TELA INICIAL: APRESENTAÇÃO COGNIVERSE & ACESSO PORTAL ÂNIMA
+       ======================================================== -->
+  <div id="telaInicialCogniverse">
+    <div class="portal-glassmorphism">
+      <div class="selo-pulsante">
+        <span class="selo-ponto"></span>
+        <span>Ecossistema Ânima • Inteligência Adaptativa</span>
+      </div>
+
+      <!-- Logo Original Ampliada -->
+      <img src="src/imagens/logo-cogniverse.png" alt="Cogniverse" class="logo-hero-oficial" onerror="this.onerror=null; this.src='logo Cogniverse_3.jpg';">
+
+      <p class="portal-slogan">Conectando mentes, criando futuros</p>
+
+      <p class="portal-descricao">
+        Uma plataforma de aprendizagem inteligente que acompanha seu ritmo de estudo e oferece trilhas personalizadas para cada etapa da sua jornada.
+      </p>
+
+      <!-- Cartão de Acesso Contextualizado -->
+      <div class="card-usuario-login">
+        <div class="avatar-login-circulo">CP</div>
+        <div>
+          <div style="font-weight: 700; color: #111827; font-size: 0.95rem;">Camila Paranhos</div>
+          <div style="font-size: 0.8rem; color: #6B7280;">Ciência da Computação • UNIFACS Camaçari</div>
+        </div>
+      </div>
+
+      <button id="btnEntrarPlataforma" class="btn-entrar-universo">
+        <span>Entrar na Plataforma</span>
+        <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       CABEÇALHO DA PLATAFORMA
+       ======================================================== -->
+  <header>
+    <div class="nav-container">
+      <div class="nav-esquerda">
+        <!-- Logo Original no Header -->
+        <img src="src/imagens/logo-cogniverse.png" alt="Cogniverse" class="nav-logo-oficial" onerror="this.onerror=null; this.src='logo Cogniverse_3.jpg';">
+        <div>
+          <span class="nav-titulo">Cogniverse</span>
+          <div class="nav-slogan">Conectando mentes, criando futuros</div>
+        </div>
+      </div>
+
+      <div class="nav-controles">
+        <div class="toggle-abas">
+          <button id="btnAbaEstudante" class="btn-nav-aba ativa">Constelação do Aluno</button>
+          <button id="btnAbaDocente" class="btn-nav-aba">Mosaico do Docente</button>
+        </div>
+        <button id="btnAlternarTema" class="btn-icone-tema" title="Alternar Modo Claro/Escuro">
+          <span id="rotuloTema">🌙</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       ÁREA DINÂMICA
+       ======================================================== -->
+  <main>
+    <!-- 1. VISÃO DO ALUNO: CONSTELAÇÃO & DECISÃO SITUADA -->
+    <section id="secaoEstudante" class="painel-visao ativa">
+      <div class="barra-voltar-inicio">
+        <button type="button" class="btn-voltar-inicio" data-voltar-inicio>Retornar à Tela Inicial</button>
+      </div>
+      <div class="grid-inovacao">
+        
+        <!-- CONSTELAÇÃO NEURAL INTERATIVA -->
+        <div class="card-constelacao">
+          <div class="topo-constelacao">
+            <div>
+              <span class="etiqueta-topo">Mapa de Aprendizagem em Tempo Real</span>
+              <h2 class="titulo-constelacao">Mapa de Aprendizagem: Estruturas de Dados</h2>
+            </div>
+            <span class="badge-interativo">Interativo</span>
+          </div>
+          <p class="instrucao-constelacao">
+            Clique nos pontos para abrir conteúdos rápidos e continuar sua trilha de estudo.
+          </p>
+          <canvas id="canvasNeural"></canvas>
+        </div>
+
+        <!-- COLUNA INTERATIVA: ESTADO COGNITIVO & SIMULAÇÃO SITUADA -->
+        <div class="coluna-interativa">
+          
+          <!-- MONITOR NEUROCOGNITIVO -->
+          <div class="card-estado-mental">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 0.8rem; font-weight: 700; color: var(--cor-roxo); text-transform: uppercase;">Acompanhamento de Progresso</span>
+              <span id="textoStatusCarga" style="font-size: 0.8rem; font-weight: 700; color: var(--cor-verde);">Foco Ativo (48%)</span>
+            </div>
+            <div class="barra-estado-cognitivo">
+              <div class="progresso-mental" id="barraProgresso"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--cor-texto-mutado);">
+              <span>Baixo Esforço</span>
+              <span>Ritmo Ideal</span>
+              <span>Saturação</span>
+            </div>
+          </div>
+
+          <!-- SIMULADOR SITUADO (TOMADA DE DECISÃO) -->
+          <div class="card-simulacao">
+            <span style="font-size: 0.75rem; font-weight: 700; color: var(--cor-laranja); text-transform: uppercase;">Simulação Prática • Tomada de Decisão</span>
+            <h3 style="font-size: 1.05rem; margin-top: 4px;">Dilema da Infraestrutura: Falha em Tempo Real</h3>
+            <div class="cenario-caixa" id="caixaCenario">
+              Um banco com 10 milhões de registros sofreu travamento. O sistema exige busca em menos de 5ms. Como você estrutura o resgate?
+            </div>
+            <div class="opcoes-decisao">
+              <button class="btn-decisao" id="btnDecisao1">A. Percorrer os registros linearmente com verificação booleana.</button>
+              <button class="btn-decisao" id="btnDecisao2">B. Organizar os dados e usar busca rápida nos índices.</button>
+              <button class="btn-decisao" id="btnDecisao3">C. Carregar todo o banco em cache bruto sem indexação.</button>
+            </div>
+            <div id="resultadoSimulacao" class="resultado-simulacao-box"></div>
+          </div>
+
+        </div>
+
+        <!-- AGENTE TUTOR METACONECTADO -->
+        <div class="card-tutor-ia">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <div class="icone-ia-gradiente">IA</div>
+              <div>
+                <h3 style="font-size: 1.1rem;">Tutor Inteligente Cogniverse</h3>
+                <span style="font-size: 0.8rem; color: var(--cor-texto-mutado);">Assistente de estudos com IA</span>
+              </div>
+            </div>
+            <input type="password" id="chaveApiGemini" placeholder="Chave Gemini (Opcional - Mock Ativo)" class="input-chave-api">
+          </div>
+
+          <div class="conversa-ia" id="janelaChat">
+            <div class="balao-ia">
+              Olá, Camila! Sou seu tutor no Cogniverse. O tema de <strong>Pesquisa Binária</strong> foi ativado. O que te levou à sua última escolha?
+            </div>
+          </div>
+
+          <form id="formChatTutor" class="form-chat">
+            <input type="text" id="inputChatTutor" placeholder="Escreva sua dúvida..." class="input-texto-chat">
+            <button type="submit" class="btn-enviar-chat">Enviar</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. PAINEL DOCENTE: O MACRO-MOSAICO COLETIVO DA TURMA -->
+    <section id="secaoDocente" class="painel-visao">
+      <div class="card-docente">
+        <div class="barra-voltar-inicio barra-voltar-docente">
+          <button type="button" class="btn-voltar-inicio" data-voltar-inicio>Retornar à Tela Inicial</button>
+        </div>
+        <span style="font-size: 0.8rem; font-weight: 700; color: var(--cor-laranja); text-transform: uppercase;">Painel do Professor • Apoio Inteligente</span>
+        <h2 style="font-size: 1.5rem; color: var(--cor-primaria); margin-top: 4px;">Mosaico de Aprendizagem da Turma (UNIFACS 2026.2)</h2>
+        <p style="color: var(--cor-texto-mutado); font-size: 0.92rem; margin-top: 6px;">
+          Cada peça mostra como a turma está em um tema importante da disciplina, ajudando você a identificar rapidamente onde reforçar.
+        </p>
+
+        <!-- GRADE DO VERDADEIRO MOSAICO COLETIVO -->
+        <div class="mosaico-grade-visual">
+          
+          <!-- Peça 1 do Mosaico: Bloqueio Crítico -->
+          <div class="peca-mosaico-coletivo peca-critica">
+            <div class="mosaico-topo-info">
+              <span class="mosaico-nome-habilidade">Organização em Árvores</span>
+              <span class="mosaico-valor-retencao" style="color: #EF4444;">41%</span>
+            </div>
+            <div class="mosaico-barra-retencao">
+              <div class="mosaico-barra-preenchimento" style="width: 41%; background: #EF4444;"></div>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--cor-texto-mutado);">
+              <strong>Diagnóstico:</strong> 12 estudantes tiveram dificuldade nesse tema nas últimas atividades e precisam de reforço.
+            </p>
+            <button class="btn-intervencao-mosaico" style="background: #EF4444;" onclick="alert('Relatório de tutoria enviado! 12 alunos notificados para mentoria pontual.')">
+              Acionar Tutoria Presencial (12 Alunos)
+            </button>
+          </div>
+
+          <!-- Peça 2 do Mosaico: Consolidado com Sucesso -->
+          <div class="peca-mosaico-coletivo peca-estavel">
+            <div class="mosaico-topo-info">
+              <span class="mosaico-nome-habilidade">Busca Rápida de Dados</span>
+              <span class="mosaico-valor-retencao" style="color: var(--cor-verde);">88%</span>
+            </div>
+            <div class="mosaico-barra-retencao">
+              <div class="mosaico-barra-preenchimento" style="width: 88%; background: var(--cor-verde);"></div>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--cor-texto-mutado);">
+              <strong>Diagnóstico:</strong> A turma foi muito bem nesse tema e já pode avançar com autonomia.
+            </p>
+            <span style="font-size: 0.8rem; color: var(--cor-verde); font-weight: 700; margin-top: auto;">Competência Consolidada ✓</span>
+          </div>
+
+          <!-- Peça 3 do Mosaico: Em Desenvolvimento / Atenção -->
+          <div class="peca-mosaico-coletivo peca-atencao">
+            <div class="mosaico-topo-info">
+              <span class="mosaico-nome-habilidade">Desempenho dos Algoritmos</span>
+              <span class="mosaico-valor-retencao" style="color: var(--cor-laranja);">64%</span>
+            </div>
+            <div class="mosaico-barra-retencao">
+              <div class="mosaico-barra-preenchimento" style="width: 64%; background: var(--cor-laranja);"></div>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--cor-texto-mutado);">
+              <strong>Diagnóstico:</strong> Parte da turma ainda confunde cenários simples e complexos. Reforços visuais foram sugeridos.
+            </p>
+            <button class="btn-intervencao-mosaico" style="background: var(--cor-laranja);" onclick="alert('Cápsulas de microlearning disparadas para os estudantes!')">
+              Disparar Reforço em Microlearning
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape-inferior">
+    Cogniverse • Conectando mentes, criando futuros — Ecossistema Ânima • Hackathon Sintechtica 2026
+  </footer>
+
+  <!-- Scripts JavaScript Modulares -->
+  <script type="module" src="src/js/principal.js"></script>
+</body>
+</html>
